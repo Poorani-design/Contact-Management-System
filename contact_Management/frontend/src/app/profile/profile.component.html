@@ -1,0 +1,22 @@
+<section style="background-color: #eee " >
+  <div class="container-fluid py-3 ">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let readUser of readUser">
+        <div class="card mb-4">
+          <div class="card-body text-center">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp"
+              alt="avatar"
+              class="rounded-circle img-fluid"
+              style="width: 50px"
+            />
+            <h5 class="my-1">{{readUser.cname}}</h5>
+            <p class="text-muted mb-1">{{readUser.cmail}}</p>
+            <p class="text-dark mb-4" ><a class="nav-link" href="tel:{{readUser.ccontact}}">{{readUser.ccontact}}</a></p>
+           <p> <a class="text-muted  nav-link"[routerLink]="['/view',readUser.id]">View</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
